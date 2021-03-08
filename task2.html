@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/images/cat2.svg" />
+    <title>task2</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- styles -->
+    <link rel="stylesheet" href="styles/shared.css">
+    <link rel="stylesheet" href="styles/icons.css">
+    <link rel="stylesheet" href="styles/task2/style.css">
+    <!-- styles -->
+</head>
+
+<body>
+    <div class="app-wrapper">
+        <!-- navbar -->
+        <nav class="navbar">
+            <img class="navbar__logo" src="images/pawprint.svg" />
+            <div class="navbar__box">
+                <a href="./index.html" class="navbar__first-link">Task1</a>
+                <a href="./task2.html" class="navbar__second-link">Task2</a>
+            </div>
+        </nav>
+        <!-- navbar -->
+
+        <div class="sidebar-tasks-wrapper">
+            <!-- sidebar -->
+            <div class="sidebar">
+                <form>
+                    <div class="container">
+                        <div class="select-box">
+                            <div class="options-container"></div>
+                            <div class="selected">
+                                Pracownik
+                            </div>
+                            <div class="search-box hidden">
+                                <input type="text" placeholder="Szukaj" />
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <textarea placeholder="Zadanie"></textarea>
+                        <p class="task-error-message"></p>
+                    </div>
+                    <button class="add-button">dodaj</button>
+                </form>
+            </div>
+            <!-- sidebar -->
+            <!-- task-template -->
+            <div class="task-template">
+                <div class="button-box">
+                    <button class="primary-btn">Pokaz wszystkie</button>
+                    <button class="primary-btn">Pokaz ukończone</button>
+                    <button class="primary-btn">Pokaz nieukonczone</button>
+                </div>
+                <!-- floating-window -->
+                <div class="floating-window">
+                    <h3 class="floating-window__title">Podsumowanie</h3>
+                    <div class="floating-window__info-box">
+                        <div class="floating-window__info-row">
+                            <p>Wszystkie zadania:</p>
+                            <p class="count_of_all_tasks_field"></p>
+                        </div>
+                        <div class="floating-window__info-row">
+                            <p>Ukończone zadania:</p>
+                            <p class="count_of_completed_tasks_field"></p>
+                        </div>
+                        <div class="floating-window__info-row">
+                            <p>Nieukończone zadania:</p>
+                            <p class="count_of_uncompleted_tasks_field"></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- floating-window -->
+                <div class="tasks-wrapper"></div>
+            </div>
+            <!-- task-template -->
+        </div>
+    </div>
+    <!-- scripts -->
+    <script src="scripts/helpers.js"></script>
+    <script src="scripts/task2/floatingWindow.js"></script>
+    <script src="scripts/task2/fakeEmployeesApi.js"></script>
+    <script src="scripts/task2/optionTile.js"></script>
+    <script src="scripts/task2/search.js"></script>
+    <script src="scripts/task2/taskTile.js"></script>
+    <script src="scripts/task2/Tasks.js"></script>
+    <script src="./scripts/task2/index.js"></script>
+    <!-- scripts -->
+</body>
+
+</html>

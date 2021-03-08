@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg" href="/images/cat1.svg" />
+    <title>task1</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- styles -->
+    <link rel="stylesheet" href="styles/shared.css">
+    <link rel="stylesheet" href="styles/task1/style.css">
+    <link rel="stylesheet" href="styles/icons.css">
+    <!-- styles -->
+</head>
+
+<body>
+    <!-- full-fact -->
+    <div class="full-fact full-fact--disabled">
+        <div class="full-fact__content">
+            <div class="full-fact__content-top">
+                <img class="close_icon" src="images/close-button.svg" />
+                <img class="cat_icon cat_icon_current" src="" />
+                <div class="full-fact__box">
+                    <p class="current_fact_id"></p>
+                    <p class="current_fact_date"></p>
+                </div>
+            </div>
+            <div class="full-fact__content-bottom">
+                <p class="current_fact_description"></p>
+            </div>
+        </div>
+        <div class="full-fact__triangle"></div>
+    </div>
+    <!-- full-fact -->
+    <div class="wrapper">
+
+        <!-- navbar -->
+        <nav class="navbar">
+            <img class="navbar__logo" src="images/pawprint.svg" />
+            <div class="navbar__box">
+                <a href="./index.html" class="navbar__first-link">Task1</a>
+                <a href="./task2.html" class="navbar__second-link">Task2</a>
+            </div>
+        </nav>
+        <!-- navbar -->
+
+        <!-- top panel -->
+        <div class="top-panel">
+            <div class="top-panel__search-container">
+                <div>
+                    <span class="top-panel__input-box"> <input class="top-panel__input" type="number" /></span>
+                    <p class="error-message"></p>
+                </div>
+                <button class="top-panel__button">Szukaj</button>
+            </div>
+            <div class="top-panel__sort-container">
+                <div class="top-panel__sort-box">
+                    <p class="top-panel__sort-label">Sortuj po datach</p>
+                    <div class="arrow_box">
+                        <img class="arrow_up_icon arrow_date_up" src="images/up-arrow.svg"></img>
+                        <img class="arrow_down_icon arrow_date_down" src="images/down-arrow.svg"></img>
+                    </div>
+                </div>
+                <div class="top-panel__sort-box">
+                    <p class="top-panel__sort-label">Sortuj po id</p>
+                    <div class="top-panel__arrow-box">
+                        <img class="arrow_up_icon arrow_id_up" src="images/up-arrow.svg"></img>
+                        <img class="arrow_down_icon arrow_id_down" src="images/down-arrow.svg"></img>
+                    </div>
+                </div>
+                <img click="getCatsFacts" class="refresh_icon" src="images/refresh.svg"></img>
+            </div>
+        </div>
+        <!-- top panel -->
+
+        <!-- facts container -->
+        <div class="facts-container"></div>
+        <!-- facts container -->
+
+    </div>
+    <!-- scripts -->
+    <script src="scripts/helpers.js"></script>
+    <script src="./scripts/task1/factTile.js"></script>
+    <script src="./scripts/task1/Facts.js"></script>
+    <script src="./scripts/task1/index.js"></script>
+    <!-- scripts -->
+</body>
+
+</html>

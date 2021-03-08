@@ -1,0 +1,267 @@
+@keyframes zoomTile {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.98);
+  }
+}
+
+/* wrapper */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper--blured {
+  filter: blur(5px);
+  pointer-events: none;
+}
+/* wrapper end*/
+
+/* top-panel */
+.top-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  height: 50px;
+  margin-bottom: 27px;
+  margin-top: 100px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 24px;
+}
+
+.top-panel__input {
+  background: #f0f0f0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  width: 209px;
+  height: 30px;
+  border: none;
+  margin-right: 37px;
+  font-size: 14px;
+  padding: 0 10px 0 10px;
+}
+
+.top-panel__input-box {
+  position: relative;
+}
+
+.top-panel__input-box:after {
+  content: "ilość kotów";
+  position: absolute;
+  left: 10px;
+  bottom: 80%;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.input--error {
+  border: 1px solid #ff000f;
+}
+
+.input--valid {
+  border: 1px solid #01df32;
+}
+
+.error-message {
+  font-size: 9px;
+  margin-left: 10px;
+  color: #ff000f;
+}
+
+.top-panel__sort-label {
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.top-panel__search-container {
+  width: 60%;
+  display: flex;
+}
+
+.top-panel__button {
+  background: #ffdc64;
+  border-radius: 4px;
+  width: 84px;
+  height: 28px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.top-panel__sort-container {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  height: 50px;
+  justify-content: space-between;
+}
+
+.top-panel__sort-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 50px;
+}
+
+.top-panel__arrow_box {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+/* top-panel end*/
+
+/* full-fact */
+.full-fact {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 634px;
+  height: 319px;
+  background: #f0f0f0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.full-fact__content {
+  width: 100%;
+  height: 319px;
+  padding: 10px;
+}
+
+.full-fact__box {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 40px;
+}
+.full-fact__content-top {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px 20px 20px;
+  width: 100%;
+  height: 120px;
+}
+
+.full-fact__content-bottom {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  padding: 0 53px 0 53px;
+  width: 100%;
+  height: auto;
+}
+
+.full-fact__triangle {
+  z-index: -1;
+  background: #fff;
+  width: 70%;
+  height: 319px;
+  transform: rotate(35deg) scale(1.8) translate(53%);
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.current_fact_id {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.current_fact_date {
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.current_fact_description {
+  font-size: 18px;
+}
+
+.full-fact--disabled {
+  visibility: hidden;
+}
+/* full-fact end*/
+
+/* facts-container */
+.facts-container {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 32px;
+  row-gap: 42px;
+  width: 100%;
+  max-height: 75vh;
+  overflow: scroll;
+  padding: 10px;
+}
+
+.facts-container::-webkit-scrollbar {
+  display: none;
+}
+/* facts-container */
+
+/* fact-tile */
+.fact-tile {
+  display: flex;
+  cursor: pointer;
+  width: 272px;
+  height: 107px;
+  font-size: 14px;
+  background: #f0f0f0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+.fact-tile:hover {
+  animation: 0.5s zoomTile forwards;
+}
+
+.fact-tile__icon {
+  width: 51.72px;
+  height: 55px;
+}
+
+.fact-tile__icon-box {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  padding: 10px;
+}
+
+.fact-tile__fact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 8px;
+  width: 100%;
+  height: 107px;
+}
+
+.fact-tile__id {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.fact-tile__date {
+  font-weight: 900;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+/* fact-tile end*/

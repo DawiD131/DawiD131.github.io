@@ -1,0 +1,364 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+textarea {
+  width: 274px;
+  height: 142px;
+  background: #f0f0f0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  border: none;
+  margin-top: 32px;
+  color: #575757;
+  font-size: 14px;
+  padding: 10px 15px 10px 15px;
+}
+
+select {
+  width: 274px;
+  height: 30px;
+  background: #f0f0f0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  border: none;
+}
+
+/* app-wrapper */
+.app-wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #e5e5e5;
+}
+/* app-wrapper end*/
+/* task-template */
+.task-template {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: 125px;
+  width: 100%;
+  height: calc(100vh - 70px);
+}
+/* task-template end*/
+/* buttons */
+.add-button {
+  background: #ffdc64;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  width: 274px;
+  height: 34px;
+  border: none;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.primary-btn {
+  width: 195px;
+  height: 46px;
+  background: #ffdc64;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+/* buttons end */
+/* button-box */
+.button-box {
+  width: 100%;
+  padding-top: 62px;
+  padding-bottom: 35px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.button-box button:nth-child(2) {
+  margin: 0 36px;
+}
+/* button-box end*/
+/* floating-window */
+.floating-window {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 235.57px;
+  height: 165px;
+  background: #f0f0f0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  position: absolute;
+  right: 100px;
+  top: 143px;
+  z-index: 100;
+  padding: 20px;
+}
+
+.floating-window__info-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.floating-window__info-box .floating-window__info-row:nth-child(2) {
+  margin: 16px 0 16px 0;
+}
+.floating-window__title {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.floating-window__info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+/* floating-window end*/
+
+.sidebar {
+  display: flex;
+  justify-content: center;
+  min-width: 378px;
+  min-height: calc(100vh - 70px);
+  background: #f0f0f0;
+  position: relative;
+}
+
+.task {
+  box-sizing: border-box;
+  padding: 10px;
+  position: relative;
+  width: 580px;
+  height: 200px;
+  background: #f0f0f0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  margin-bottom: 40px;
+}
+
+.task_date {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.task_name {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.task_top_section {
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 10px;
+}
+
+.task_name_img_box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.task_bottom_section {
+  box-sizing: border-box;
+  padding: 0 20px 0 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60%;
+  font-size: 13px;
+}
+
+.sidebar-tasks-wrapper {
+  display: flex;
+}
+
+.tasks-wrapper {
+  overflow: scroll;
+}
+
+.tasks_wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.user_image {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.taks_date {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+/* dropdown */
+
+.container {
+  margin-top: 100px;
+}
+
+.select-box {
+  position: relative;
+  display: flex;
+  width: 274px;
+  flex-direction: column;
+}
+
+.select-box .options-container {
+  background: #f0f0f0;
+  border: 1px solid #757575;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0 0 3px 3px;
+  color: #000;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  overflow: hidden;
+  order: 1;
+}
+
+.selected {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #f0f0f0;
+  font-size: 14px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 8px;
+  color: #575757;
+  position: relative;
+  height: 30px;
+  order: 0;
+  border-radius: 3px;
+}
+
+.selected::after {
+  content: "";
+  background: url("/images/down-arrow.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 15px;
+  right: 10px;
+  top: 5px;
+}
+
+.selected--error {
+  border: 1px solid #ff000f;
+}
+
+.selected--valid {
+  border: 1px solid #01df32;
+}
+
+.task-error-message {
+  font-size: 9px;
+  margin-left: 10px;
+  color: #ff000f;
+}
+
+.select-box .options-container.active {
+  max-height: 136px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+  top: -6px;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+  display: none;
+}
+
+.select-box .option,
+.selected {
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.option {
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+}
+
+.option--selected {
+  position: relative;
+  color: #004c8a;
+  font-weight: 600;
+}
+
+.option--selected::after {
+  position: absolute;
+  right: 15px;
+  content: "";
+  width: 17px;
+  height: 17px;
+  background: url("../../images/tick.svg") no-repeat;
+}
+
+.select-box .option:hover {
+  background: #fff;
+}
+
+.select-box label {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.select-box .option .radio {
+  display: none;
+}
+
+.search-box input {
+  width: 261.4px;
+  height: 30px;
+  padding: 12px 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  position: absolute;
+  border-radius: 3px;
+  z-index: 100;
+  border: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px 4px 0 0;
+  border: 1px solid #757575;
+  height: 44px;
+  width: 100%;
+}
+.search-box input:focus {
+  outline: none;
+}
+
+.select-box .options-container.active ~ .search-box input {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hidden {
+  display: none;
+}

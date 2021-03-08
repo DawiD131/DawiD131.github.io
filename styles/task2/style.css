@@ -181,10 +181,10 @@ select {
 }
 
 .tasks-wrapper {
-  overflow: scroll;
+  overflow-x: scroll;
 }
 
-.tasks_wrapper::-webkit-scrollbar {
+.tasks-wrapper::-webkit-scrollbar {
   display: none;
 }
 
